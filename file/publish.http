@@ -1,0 +1,7 @@
+### curl -X POST http://localhost:8081/publish -H 'Content-Type: application/json' -d '{"message": "Hello, Kafka!"}'
+POST http://localhost:8081/publish
+Content-Type: application/json
+
+{
+  "message": "Hello, Kafka!"
+}
