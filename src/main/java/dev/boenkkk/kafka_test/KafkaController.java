@@ -16,4 +16,10 @@ public class KafkaController {
         kafkaProducerService.sendMessage(message);
         return "Message sent to Kafka topic successfully!";
     }
+
+    @PostMapping("/publishsync")
+    public String sendMessageToKafkaTopicSync(@RequestBody String message) throws Exception {
+        kafkaProducerService.sendMessageSync(message);
+        return "Message sent to Kafka topic successfully!";
+    }
 }

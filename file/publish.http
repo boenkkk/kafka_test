@@ -1,7 +1,17 @@
 ### curl -X POST http://localhost:8081/publish -H 'Content-Type: application/json' -d '{"message": "Hello, Kafka!"}'
-POST http://localhost:8081/publish
+POST http://localhost:8087/publish
 Content-Type: application/json
 
-{
-  "message": "Hello, Kafka!"
-}
+{"protocol":"DNP3", "type":"Analog Input", "index":"6", "variation":"GROUP30_VAR6", "value":7779991111222}
+
+### curl -X POST http://localhost:8081/publish -H 'Content-Type: application/json' -d '{"message": "Hello, Kafka!"}'
+POST http://localhost:8087/publishsync
+Content-Type: application/json
+
+{"message": "sent to 8087"}
+
+###
+POST http://localhost:18087/publishsync
+Content-Type: application/json
+
+{"message": "sent to 18087"}
